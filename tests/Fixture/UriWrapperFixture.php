@@ -11,14 +11,19 @@ class UriWrapperFixture implements UriInterface
 {
     use UriWrapper;
 
-    public function __construct(UriInterface|null $uri = null, callable|null $factory = null)
+    protected function wrap(UriInterface $uri): static
     {
-        if ($uri instanceof UriInterface) {
-            $this->setWrapped($uri);
+        return new self($uri);
+    }
+
+    public function __construct(UriInterface|null $wrapped = null, callable|null $factory = null)
+    {
+        if ($wrapped instanceof UriInterface) {
+            $this->setWrapped($wrapped);
         }
 
         if (null !== $factory) {
-            $this->setFactory($factory);
+            $this->setWrappedFactory($factory);
         }
     }
 }

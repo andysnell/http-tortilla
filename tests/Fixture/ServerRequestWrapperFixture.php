@@ -11,14 +11,19 @@ class ServerRequestWrapperFixture implements ServerRequestInterface
 {
     use ServerRequestWrapper;
 
-    public function __construct(ServerRequestInterface|null $request = null, callable|null $factory = null)
+    protected function wrap(ServerRequestInterface $server_request): static
     {
-        if ($request instanceof ServerRequestInterface) {
-            $this->setWrapped($request);
+        return new self($server_request);
+    }
+
+    public function __construct(ServerRequestInterface|null $wrapped = null, callable|null $factory = null)
+    {
+        if ($wrapped instanceof ServerRequestInterface) {
+            $this->setWrapped($wrapped);
         }
 
         if (null !== $factory) {
-            $this->setFactory($factory);
+            $this->setWrappedFactory($factory);
         }
     }
 }

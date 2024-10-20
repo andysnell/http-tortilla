@@ -11,14 +11,19 @@ class MessageWrapperFixture implements MessageInterface
 {
     use MessageWrapper;
 
-    public function __construct(MessageInterface|null $message = null, callable|null $factory = null)
+    protected function wrap(MessageInterface $message): static
     {
-        if ($message instanceof MessageInterface) {
-            $this->setWrapped($message);
+        return new self($message);
+    }
+
+    public function __construct(MessageInterface|null $wrapped = null, callable|null $factory = null)
+    {
+        if ($wrapped instanceof MessageInterface) {
+            $this->setWrapped($wrapped);
         }
 
-        if (null !== $factory) {
-            $this->setFactory($factory);
+        if ($factory) {
+            $this->setWrappedFactory($factory);
         }
     }
 }
