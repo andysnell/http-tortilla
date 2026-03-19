@@ -116,11 +116,7 @@ make phpunit
 ```
 
 [github]: https://github.com/wickedbyte/http-tortilla
-
 [issues]: https://github.com/wickedbyte/http-tortilla/issues
-
 [pull requests]: https://github.com/wickedbyte/http-tortilla/pulls
-
 [per-cs]: https://www.php-fig.org/per/coding-style/
-
 [gh-flow]: https://guides.github.com/introduction/flow/
