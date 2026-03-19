@@ -3,7 +3,7 @@
 # PHP Build Stages
 ##------------------------------------------------------------------------------
 
-ARG PHP_VERSION=8.4-cli
+ARG PHP_VERSION=8.5-cli
 FROM php:${PHP_VERSION} AS php
 ARG WITH_XDEBUG=false
 ARG USER_UID=1000
