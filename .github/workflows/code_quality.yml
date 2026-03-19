@@ -24,4 +24,4 @@ jobs:
           cp .env.dist .env;
           sed -i "s/^GITHUB_TOKEN=.*/GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}/" ".env";
           sed -i "s/^PHP_VERSION=.*/PHP_VERSION=${{ matrix.php-version }}-cli/" ".env";
-          make -j && make ci;
+          make -j$(nproc) && make ci;

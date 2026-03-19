@@ -68,9 +68,9 @@ build/docker/docker-compose.json: Dockerfile compose.yml | build/docker
 		--build-arg USER_GID=$$(id -g)
 	touch "$@" # required to consistently update the file mtime
 
-build/docker/salt-lite-%.json: Dockerfile | build/docker
-	docker buildx build --target="$*" --pull --load --tag="salt-lite-$*" --file Dockerfile .
-	docker image inspect "salt-lite-$*" > "$@"
+build/docker/http-tortilla-%.json: Dockerfile | build/docker
+	docker buildx build --target="$*" --pull --load --tag="http-tortilla-$*" --file Dockerfile .
+	docker image inspect "http-tortilla-$*" > "$@"
 
 ##------------------------------------------------------------------------------
 # Build/Setup/Teardown Targets
@@ -94,7 +94,7 @@ vendor: build/composer build/docker/docker-compose.json composer.json composer.l
 	$(docker-php) composer install
 	@touch vendor
 
-build/.install : vendor build/docker/salt-lite-prettier.json | $(BUILD_DIRS)
+build/.install : vendor build/docker/http-tortilla-prettier.json | $(BUILD_DIRS)
 	@echo "Application Build Complete."
 	@touch build/.install
 
@@ -129,7 +129,6 @@ lint phpcbf phpcs phpstan phpunit phpunit-coverage rector rector-dry-run: build/
 .PHONY: ci pre-ci preci
 ci: lint phpcs phpstan phpunit prettier-check rector-dry-run
 
-.NOTPARALLEL: pre-ci preci
 .PHONY: pre-ci preci
 pre-ci preci: prettier-write rector phpcbf ci
 
@@ -144,8 +143,8 @@ serve-coverage:
 ##------------------------------------------------------------------------------
 
 .PHONY: prettier-%
-prettier-%: | build/docker/salt-lite-prettier.json
-	$(docker-run) --volume $${PWD}:/app salt-lite-prettier --$* .
+prettier-%: | build/docker/http-tortilla-prettier.json
+	$(docker-run) --volume $${PWD}:/app http-tortilla-prettier --$* .
 
 ##------------------------------------------------------------------------------
 # Enable Makefile Overrides
