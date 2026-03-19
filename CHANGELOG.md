@@ -30,11 +30,18 @@ this project.
 - Updated development dependencies to latest versions
 - Updated GitHub Actions to run on PHP version matrix (8.2, 8.3, 8.4, 8.5)
 - Updated CONTRIBUTING.md and SECURITY.md files
+- Standardized CHANGELOG date format to Keep a Changelog convention
+- Replaced `salt-lite` Docker image naming with project-specific names
+- Fixed Dockerfile nested heredoc to use distinct delimiters
+- Added `sharing=locked` to Dockerfile apt-get cache mount
+- Installed PHP `zip` extension in Dockerfile
 
 ### Added
 
 - Added WickedByte copyright to LICENSE file
 - Added fork notice to README.md
+- Added `homepage` and `prefer-stable` to composer.json
+- Added proper PHP blocks to README code examples
 
 ## 2.0.1 - 2025-11-13
 
