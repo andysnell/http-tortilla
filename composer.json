@@ -35,6 +35,8 @@
     "phpunit/phpunit": "^12.2",
     "rector/rector": "^2.1"
   },
+  "homepage": "https://github.com/wickedbyte/http-tortilla",
+  "prefer-stable": true,
   "autoload": {
     "psr-4": {
       "WickedByte\\Http\\Message\\": "src/"
