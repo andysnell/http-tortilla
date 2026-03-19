@@ -1,9 +1,29 @@
-# phoneburner/link-tortilla Changelog
+# Changelog
 
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## 3.0.0 - 2026-03-19 (Forked from PhoneBurner/HTTP Tortilla)
+
+### Changed
+
+- Renamed organization namespace from `PhoneBurner` to `WickedByte`
+- Updated composer package name from `phoneburner/http-tortilla` to `wickedbyte/http-tortilla`
+- Updated default PHP version in Docker configuration to 8.5
+- Renamed `docker-compose.yml` to `compose.yml`
+- Replaced `phoneburner/coding-standard` with `wickedbyte/coding-standard`
+- Updated development dependencies to latest versions
+- Updated GitHub Actions to run on PHP version matrix (8.2, 8.3, 8.4, 8.5)
+
+### Added
+
+- Added WickedByte copyright to LICENSE file
+- Added fork notice to README.md
+- Added new CONTRIBUTING.md and SECURITY.md files
 
 ## 2.0.1 [2025-11-13]
 
