@@ -8,13 +8,20 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: ["8.2-cli", "8.3-cli", "8.4-cli", "8.5-cli"]
+      fail-fast: false
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Run Code Quality Checks
+      - name: Run Code Quality Checks (PHP ${{ matrix.php-version }})
+        env:
+          PHP_VERSION: ${{ matrix.php-version }}
         run: |
           cp .env.dist .env;
           sed -i "s/^GITHUB_TOKEN=.*/GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}/" ".env";
+          sed -i "s/^PHP_VERSION=.*/PHP_VERSION=${{ matrix.php-version }}/" ".env";
           make -j && make ci;
