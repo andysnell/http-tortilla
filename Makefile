@@ -79,13 +79,7 @@ build/docker/http-tortilla-%.json: Dockerfile | build/docker
 .env:
 	@$(call copy-safe,.env.dist,.env)
 
-phpstan.neon:
-	@$(call copy-safe,phpstan.dist.neon,phpstan.neon)
-
-phpunit.xml:
-	@$(call copy-safe,phpunit.dist.xml,phpunit.xml)
-
-$(BUILD_DIRS): | .env phpstan.neon phpunit.xml
+$(BUILD_DIRS): | .env
 	mkdir -p "$@"
 
 vendor: build/composer build/docker/docker-compose.json composer.json composer.lock | .env
