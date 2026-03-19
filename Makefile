@@ -86,10 +86,10 @@ phpunit.xml:
 	@$(call copy-safe,phpunit.dist.xml,phpunit.xml)
 
 $(BUILD_DIRS): | .env phpstan.neon phpunit.xml
-	mkdir --parents "$@"
+	mkdir -p "$@"
 
 vendor: build/composer build/docker/docker-compose.json composer.json composer.lock | .env
-	mkdir --parents "$@"
+	mkdir -p "$@"
 	@$(call check-token,GITHUB_TOKEN)
 	$(docker-php) composer install
 	@touch vendor

@@ -1,5 +1,7 @@
 # Ignore IDE, & AI Directories
+/.ai
 /.aiignore
+/.claude
 /.cursor
 /.idea
 /.junie
