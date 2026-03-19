@@ -4,7 +4,6 @@ parameters:
     paths:
         - src
         - tests
-
     ignoreErrors:
         - identifier: missingType.iterableValue
         - message: '/^Call to an undefined method Prophecy\\Prophecy\\ObjectProphecy/'

@@ -21,7 +21,7 @@ return RectorConfig::configure()
         __DIR__ . '/src',
         __DIR__ . '/tests',
     ])
-    ->withPhpSets(php84: true)
+    ->withPhpSets(php85: true)
     ->withAttributesSets(all: true)
     ->withPreparedSets(
         deadCode: true,
