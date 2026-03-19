@@ -60,7 +60,7 @@ BUILD_DIRS = build/.phpunit.cache \
 # Docker Targets
 ##------------------------------------------------------------------------------
 
-build/docker/docker-compose.json: Dockerfile docker-compose.yml | build/docker
+build/docker/docker-compose.json: Dockerfile compose.yml | build/docker
 	docker compose pull --quiet --policy="always"
 	COMPOSE_BAKE=true docker compose build \
 		--pull \
