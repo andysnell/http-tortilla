@@ -46,7 +46,6 @@
 /public/                    export-ignore
 /rector.php                 export-ignore
 /resources/                 export-ignore
-/resources/                 export-ignore
 /settings.ini               export-ignore
 /storage/                   export-ignore
 /tests/                     export-ignore
