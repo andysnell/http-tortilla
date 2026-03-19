@@ -16,7 +16,7 @@ trait UploadedFileWrapper
 
     private \Closure|null $factory = null;
 
-    private function setWrapped(UploadedFileInterface $file): static
+    protected function setWrapped(UploadedFileInterface $file): static
     {
         $this->wrapped = $file;
         return $this;
