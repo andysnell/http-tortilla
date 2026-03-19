@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 3.0.0 - 2026-03-19 (Project Forked)
 
-Forked from [PhoneBurner/http-tortilla](https://github.com/PhoneBurner/http-tortilla).
+Forked from [phoneburner/http-tortilla](https://github.com/phoneburner/http-tortilla).
 
 > This project is an independently maintained fork of [phoneburner/http-tortilla](https://github.com/phoneburner/http-tortilla), originally
 > released under the MIT license, by the original project authors. This fork is neither affiliated with nor endorsed by
@@ -36,7 +36,7 @@ this project.
 - Added WickedByte copyright to LICENSE file
 - Added fork notice to README.md
 
-## 2.0.1 [2025-11-13]
+## 2.0.1 - 2025-11-13
 
 ### Added
 
@@ -55,7 +55,7 @@ this project.
 
 - Fix whitespace issues in .gitattributes
 
-## 2.0.0 [2025-07-30]
+## 2.0.0 - 2025-07-30
 
 Major changes to the previous unreleased version to bring everything up to date
 with the latest versions of PHP, PSR-7, and PHPUnit.
@@ -100,7 +100,7 @@ with the latest versions of PHP, PSR-7, and PHPUnit.
 
 - Completed code coverage for StreamWrapper::tell()
 
-## 1.0.0-rc1 [2020-12-17]
+## 1.0.0-rc1 - 2020-12-17
 
 ### Added
 
@@ -112,7 +112,7 @@ with the latest versions of PHP, PSR-7, and PHPUnit.
 - Updated minimum PHP version to 7.4
 - Expand CI testing scope to PHP 8.0
 
-## 1.0.0-beta2 [2020-08-18]
+## 1.0.0-beta2 - 2020-08-18
 
 ### Added
 
@@ -126,7 +126,7 @@ with the latest versions of PHP, PSR-7, and PHPUnit.
 
 - Fixes the overly aggressive type declarations
 
-## 1.0.0-beta1 [2020-08-18]
+## 1.0.0-beta1 - 2020-08-18
 
 ### Added
 
