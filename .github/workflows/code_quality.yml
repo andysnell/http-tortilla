@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-version: ["8.2-cli", "8.3-cli", "8.4-cli", "8.5-cli"]
+        php-version: ["8.2", "8.3", "8.4", "8.5"]
       fail-fast: false
 
     steps:
@@ -23,5 +23,5 @@ jobs:
         run: |
           cp .env.dist .env;
           sed -i "s/^GITHUB_TOKEN=.*/GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}/" ".env";
-          sed -i "s/^PHP_VERSION=.*/PHP_VERSION=${{ matrix.php-version }}/" ".env";
+          sed -i "s/^PHP_VERSION=.*/PHP_VERSION=${{ matrix.php-version }}-cli/" ".env";
           make -j && make ci;
