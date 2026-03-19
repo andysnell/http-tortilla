@@ -1,5 +1,9 @@
 # HTTP Tortilla - HTTP Message (PSR-7) Wrapper
 
+> This project is an independently maintained fork of [phoneburner/http-tortilla](https://github.com/phoneburner/http-tortilla), originally
+> released under the MIT license, by the original project authors. This fork is neither affiliated with nor endorsed by
+> PhoneBurner.
+
 This library provides a simple set of traits to allow wrapping (or
 decoration) of various PSR-7 classes. Wrapping the classes allows easy
 addition of convenience methods while maintaining compatibility with
