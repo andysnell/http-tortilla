@@ -48,14 +48,14 @@ Once a report is received, we follow a coordinated disclosure process:
    [CVSS](https://www.first.org/cvss/), and assign an internal priority.
 3. **Remediation** — We develop and test a fix. The timeline will vary with severity:
 
-   | Severity | Target patch timeline |
-      | -------- | --------------------- |
-   | Critical | 7 days                |
-   | High     | 14 days               |
-   | Medium   | 30 days               |
-   | Low      | 60 days               |
+    | Severity | Target patch timeline |
+    | -------- | --------------------- |
+    | Critical | 7 days                |
+    | High     | 14 days               |
+    | Medium   | 30 days               |
+    | Low      | 60 days               |
 
-   We will communicate openly with you if circumstances require a longer timeline.
+    We will communicate openly with you if circumstances require a longer timeline.
 
 4. **Notification** — Before public release, we share the draft advisory and fix with you for
    review and agree on a disclosure date.
@@ -104,5 +104,5 @@ anonymity, your name (or handle) will be credited in the corresponding security 
 
 ---
 
-*This policy is maintained by [WickedByte](https://wickedbyte.com) and applies to all open source
-projects published under this organization.*
+_This policy is maintained by [WickedByte](https://wickedbyte.com) and applies to all open source
+projects published under this organization._

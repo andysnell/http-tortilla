@@ -35,7 +35,7 @@ If you have an idea for a new feature, it's a good idea to check out the [issues
 When you do begin working on your feature, here are some guidelines to consider:
 
 - Your pull request description should clearly detail the changes you have made. We will use this description to update the CHANGELOG. If there is no description, or it does not adequately describe your feature, we may ask you to update the description.
-- All pull requests must comply with the project coding standard (see below).  Please ensure your code does, too. _Hint: run `make phpcs` to check._
+- All pull requests must comply with the project coding standard (see below). Please ensure your code does, too. _Hint: run `make phpcs` to check._
 - Please **write tests** for any new features you add.
 - Please **ensure that tests pass** before submitting your pull request. `wickedbyte/http-tortilla` automatically runs tests for pull requests. However, running the tests locally will help save time. _Hint: run `make phpunit`._
 - **Use topic/feature branches.** Please do not ask to pull from your main branch. - For more information, see "[Understanding the GitHub flow][gh-flow]."

@@ -10,5 +10,5 @@
     <file>src</file>
     <file>tests</file>
     <file>rector.php</file>
-    <rule ref="PhoneBurner"/>
+    <rule ref="WickedByte"/>
 </ruleset>
