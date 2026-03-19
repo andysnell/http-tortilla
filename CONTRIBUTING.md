@@ -88,7 +88,7 @@ make phpstan
 
 ### Coding Standards
 
-This project follows a superset of [PER-CS](https://www.php-fig.org/psr/psr-12/)
+This project follows a superset of [PER-CS][per-cs]
 coding standards, enforced by [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 Rector is also used to enforce code quality and standards
 
@@ -97,7 +97,7 @@ Rector is also used to enforce code quality and standards
 make phpcs
 
 # Attempt to auto-fix coding standards issues
-make phpbf
+make phpcbf
 
 # Run Rector with project configuration
 make rector
