@@ -1,6 +1,9 @@
 # syntax=docker/dockerfile:1
 ##------------------------------------------------------------------------------
 # PHP Build Stages
+#
+# No local files are COPYed, and are excluded via .dockerignore; all sources
+# come from external stages or volume mounts.
 ##------------------------------------------------------------------------------
 
 ARG PHP_VERSION=8.5-cli
@@ -20,10 +23,11 @@ RUN groupadd --gid $USER_GID dev \
 # Update the package list and install the latest version of the packages
 RUN --mount=type=cache,target=/var/lib/apt,sharing=locked apt-get update && apt-get dist-upgrade --yes
 
-RUN --mount=type=cache,target=/var/lib/apt apt-get install --yes --quiet --no-install-recommends \
+RUN --mount=type=cache,target=/var/lib/apt,sharing=locked apt-get install --yes --quiet --no-install-recommends \
     git \
     libzip-dev \
     unzip \
+  && docker-php-ext-install zip \
   && cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
 COPY --from=ghcr.io/php/pie:bin /pie /usr/bin/pie
@@ -34,11 +38,11 @@ else \
     echo 'Skipping Installation of the Xdebug Extension...'; \
 fi
 
-RUN <<-EOF
+RUN <<-'OUTER'
   set -eux
   mkdir -p "/home/dev/.composer";
   chown -R "dev:dev" "/home/dev/.composer";
-  cat <<-EOF > /usr/local/etc/php/conf.d/settings.ini
+  cat <<-'INNER' > /usr/local/etc/php/conf.d/settings.ini
       memory_limit=1G
       assert.exception=1
       error_reporting=E_ALL
@@ -46,8 +50,8 @@ RUN <<-EOF
       log_errors=on
       xdebug.log_level=0
       xdebug.mode=off
-  EOF
-EOF
+  INNER
+OUTER
 
 COPY --link --from=composer/composer /usr/bin/composer /usr/local/bin/composer
 COPY --link --chown=$USER_UID:$USER_GID --from=composer/composer /tmp/* /home/dev/.composer/
