@@ -7,7 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## 3.0.0 - 2026-03-19 (Forked from PhoneBurner/HTTP Tortilla)
+## 3.0.0 - 2026-03-19 (Project Forked)
+
+Forked from [PhoneBurner/http-tortilla](https://github.com/PhoneBurner/http-tortilla).
+
+> This project is an independently maintained fork of [phoneburner/http-tortilla](https://github.com/phoneburner/http-tortilla), originally
+> released under the MIT license, by the original project authors. This fork is neither affiliated with nor endorsed by
+> PhoneBurner.
+
+This is a major release that includes significant changes to the project structure and development environment, as well
+as updates to the project's dependencies and configuration. The most significant user-facing change is the renaming of
+the organization namespace from `PhoneBurner` to `WickedByte`, which will need to be updated in any code that depends on
+this project.
 
 ### Changed
 
@@ -18,19 +29,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replaced `phoneburner/coding-standard` with `wickedbyte/coding-standard`
 - Updated development dependencies to latest versions
 - Updated GitHub Actions to run on PHP version matrix (8.2, 8.3, 8.4, 8.5)
+- Updated CONTRIBUTING.md and SECURITY.md files
 
 ### Added
 
 - Added WickedByte copyright to LICENSE file
 - Added fork notice to README.md
-- Added new CONTRIBUTING.md and SECURITY.md files
 
 ## 2.0.1 [2025-11-13]
 
 ### Added
 
 - Add explicit support for PHP 8.5 in composer.json constraints.
-- [Development Docker Image] Add `PHP_VERSION` and `WITH_XDEBUG` environment variables and build args to make Docker image more flexible.
+- [Development Docker Image] Add `PHP_VERSION` and `WITH_XDEBUG` environment variables and build args to make Docker
+  image more flexible.
 
 ### Changed
 
