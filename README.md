@@ -40,6 +40,13 @@ returns a wrapped object when given the product of the underlying `with*()` mess
 If the underlying object needs to be accessed, `getMessage()` may be used.
 
 ```php
+<?php
+
+declare(strict_types=1);
+
+use Psr\Http\Message\ServerRequestInterface;
+use WickedByte\Http\Message\ServerRequestWrapper;
+
 class Request implements ServerRequestInterface
 {
     use ServerRequestWrapper;
@@ -63,6 +70,13 @@ class Request implements ServerRequestInterface
 Perhaps it would be convenient to access query parameters as a collection (and not the interface's `array`):
 
 ```php
+<?php
+
+declare(strict_types=1);
+
+use Psr\Http\Message\ServerRequestInterface;
+use WickedByte\Http\Message\ServerRequestWrapper;
+
 class Request implements ServerRequestInterface
 {
     use ServerRequestWrapper;
@@ -83,6 +97,13 @@ class Request implements ServerRequestInterface
 Or perhaps the underlying library doesn't handle parsing JSON requests:
 
 ```php
+<?php
+
+declare(strict_types=1);
+
+use Psr\Http\Message\ServerRequestInterface;
+use WickedByte\Http\Message\ServerRequestWrapper;
+
 class Request implements ServerRequestInterface
 {
     use ServerRequestWrapper;
