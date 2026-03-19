@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace PhoneBurner\Tests\Http\Message;
+namespace WickedByte\Tests\Http\Message;
 
-use PhoneBurner\Tests\Http\Message\DataProvider\MessageDataProvider;
-use PhoneBurner\Tests\Http\Message\Fixture\MessageWrapperFixture;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Http\Message\MessageInterface;
+use WickedByte\Tests\Http\Message\DataProvider\MessageDataProvider;
+use WickedByte\Tests\Http\Message\Fixture\MessageWrapperFixture;
 
 final class MessageWrapperTest extends EvolvingWrapperTestCase
 {

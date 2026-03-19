@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PhoneBurner\Tests\Http\Message\DataProvider;
+namespace WickedByte\Tests\Http\Message\DataProvider;
 
 use Generator;
 

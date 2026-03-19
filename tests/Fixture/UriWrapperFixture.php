@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PhoneBurner\Tests\Http\Message\Fixture;
+namespace WickedByte\Tests\Http\Message\Fixture;
 
-use PhoneBurner\Http\Message\UriWrapper;
 use Psr\Http\Message\UriInterface;
+use WickedByte\Http\Message\UriWrapper;
 
 final class UriWrapperFixture implements UriInterface
 {

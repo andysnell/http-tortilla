@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PhoneBurner\Tests\Http\Message\Fixture;
+namespace WickedByte\Tests\Http\Message\Fixture;
 
-use PhoneBurner\Http\Message\MessageWrapper;
 use Psr\Http\Message\MessageInterface;
+use WickedByte\Http\Message\MessageWrapper;
 
 final class MessageWrapperFixture implements MessageInterface
 {

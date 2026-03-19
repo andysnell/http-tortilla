@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace PhoneBurner\Tests\Http\Message;
+namespace WickedByte\Tests\Http\Message;
 
-use PhoneBurner\Tests\Http\Message\Fixture\StreamWrapperFixture;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Http\Message\StreamInterface;
+use WickedByte\Tests\Http\Message\Fixture\StreamWrapperFixture;
 
 final class StreamWrapperTest extends WrapperTestCase
 {

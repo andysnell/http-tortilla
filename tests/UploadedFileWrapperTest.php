@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PhoneBurner\Tests\Http\Message;
+namespace WickedByte\Tests\Http\Message;
 
-use PhoneBurner\Tests\Http\Message\Fixture\UploadedFileWrapperFixture;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestWith;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UploadedFileInterface;
+use WickedByte\Tests\Http\Message\Fixture\UploadedFileWrapperFixture;
 
 final class UploadedFileWrapperTest extends WrapperTestCase
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PhoneBurner\Tests\Http\Message\Fixture;
+namespace WickedByte\Tests\Http\Message\Fixture;
 
-use PhoneBurner\Http\Message\UploadedFileWrapper;
 use Psr\Http\Message\UploadedFileInterface;
+use WickedByte\Http\Message\UploadedFileWrapper;
 
 class UploadedFileWrapperFixture implements UploadedFileInterface
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PhoneBurner\Tests\Http\Message\Fixture;
+namespace WickedByte\Tests\Http\Message\Fixture;
 
-use PhoneBurner\Http\Message\StreamWrapper;
 use Psr\Http\Message\StreamInterface;
+use WickedByte\Http\Message\StreamWrapper;
 
 class StreamWrapperFixture implements StreamInterface
 {

@@ -1,5 +1,5 @@
 {
-  "name": "phoneburner/http-tortilla",
+  "name": "wickedbyte/http-tortilla",
   "description": "Set of traits that make wrapping PSR-7 objects easier.",
   "type": "library",
   "license": "MIT",
@@ -37,12 +37,12 @@
   },
   "autoload": {
     "psr-4": {
-      "PhoneBurner\\Http\\Message\\": "src/"
+      "WickedByte\\Http\\Message\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "PhoneBurner\\Tests\\Http\\Message\\": "tests/"
+      "WickedByte\\Tests\\Http\\Message\\": "tests/"
     }
   },
   "scripts": {

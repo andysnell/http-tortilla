@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PhoneBurner\Tests\Http\Message;
+namespace WickedByte\Tests\Http\Message;
 
-use PhoneBurner\Tests\Http\Message\Fixture\UriWrapperFixture;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Http\Message\UriInterface;
+use WickedByte\Tests\Http\Message\Fixture\UriWrapperFixture;
 
 final class UriWrapperTest extends EvolvingWrapperTestCase
 {
