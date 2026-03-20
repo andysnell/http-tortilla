@@ -104,6 +104,10 @@ final class StreamWrapperTest extends WrapperTestCase
     public static function provideAllMethods(): iterable
     {
         yield from self::provideGetterMethods();
+        yield "close()" => ['close', []];
+        yield "rewind()" => ['rewind', []];
+        yield "seek(0)" => ['seek', [0, \SEEK_SET]];
+        yield "write('')" => ['write', ['']];
     }
 
     public static function provideGetterMethods(): iterable
