@@ -33,7 +33,7 @@ trait UploadedFileWrapper
         return $this->wrapped ??=
             $this->factory instanceof \Closure
                 ? ($this->factory)()
-                : throw new \UnexpectedValueException('must set wrapped message first');
+                : throw new \UnexpectedValueException('must set wrapped uploaded file first');
     }
 
     public function getStream(): StreamInterface

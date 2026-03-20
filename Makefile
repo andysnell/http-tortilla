@@ -113,7 +113,6 @@ lint phpcbf phpcs phpstan phpunit phpunit-coverage rector rector-dry-run: build/
 .PHONY: ci pre-ci preci
 ci: lint phpcs phpstan phpunit prettier-check rector-dry-run
 
-.PHONY: pre-ci preci
 pre-ci preci: prettier-write rector phpcbf ci
 
 # Run the PHP development server to serve the HTML test coverage report on port 8000.

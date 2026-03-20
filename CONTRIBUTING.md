@@ -58,7 +58,7 @@ When you do begin working on your feature, here are some guidelines to consider:
 
 ## Developing
 
-To develop this project, you will need [PHP](https://www.php.net) 8.4 or greater
+To develop this project, you will need [PHP](https://www.php.net) 8.2 or greater
 and [Composer](https://getcomposer.org). This project has a standardized Docker development environment that is
 recommended for any one contributing to this project. Composer is used as a script-runner inside of the container, and
 `make` is used externally from the host environment to run most of the common scripts.

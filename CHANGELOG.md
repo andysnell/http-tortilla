@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## 3.0.0 - 2026-03-19 (Project Forked)
+## [3.0.0] - 2026-03-19 (Project Forked)
 
 Forked from [phoneburner/http-tortilla](https://github.com/phoneburner/http-tortilla).
 
@@ -50,7 +50,7 @@ this project.
 - Added proper PHP blocks to README code examples
 - Added `StreamWrapper` void method test coverage for unwrapped state
 
-## 2.0.1 - 2025-11-13
+## [2.0.1] - 2025-11-13
 
 ### Added
 
@@ -69,7 +69,7 @@ this project.
 
 - Fix whitespace issues in .gitattributes
 
-## 2.0.0 - 2025-07-30
+## [2.0.0] - 2025-07-30
 
 Major changes to the previous unreleased version to bring everything up to date
 with the latest versions of PHP, PSR-7, and PHPUnit.
@@ -114,7 +114,7 @@ with the latest versions of PHP, PSR-7, and PHPUnit.
 
 - Completed code coverage for StreamWrapper::tell()
 
-## 1.0.0-rc1 - 2020-12-17
+## [1.0.0-rc1] - 2020-12-17
 
 ### Added
 
@@ -126,7 +126,7 @@ with the latest versions of PHP, PSR-7, and PHPUnit.
 - Updated minimum PHP version to 7.4
 - Expand CI testing scope to PHP 8.0
 
-## 1.0.0-beta2 - 2020-08-18
+## [1.0.0-beta2] - 2020-08-18
 
 ### Added
 
@@ -140,8 +140,16 @@ with the latest versions of PHP, PSR-7, and PHPUnit.
 
 - Fixes the overly aggressive type declarations
 
-## 1.0.0-beta1 - 2020-08-18
+## [1.0.0-beta1] - 2020-08-18
 
 ### Added
 
 - Initial Release
+
+[Unreleased]: https://github.com/wickedbyte/http-tortilla/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/wickedbyte/http-tortilla/compare/v2.0.1...v3.0.0
+[2.0.1]: https://github.com/wickedbyte/http-tortilla/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/wickedbyte/http-tortilla/compare/v1.0.0-rc1...v2.0.0
+[1.0.0-rc1]: https://github.com/wickedbyte/http-tortilla/compare/v1.0.0-beta2...v1.0.0-rc1
+[1.0.0-beta2]: https://github.com/wickedbyte/http-tortilla/compare/v1.0.0-beta1...v1.0.0-beta2
+[1.0.0-beta1]: https://github.com/wickedbyte/http-tortilla/releases/tag/v1.0.0-beta1

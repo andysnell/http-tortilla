@@ -30,6 +30,11 @@ trait ResponseWrapper
         $this->factory = $factory instanceof \Closure ? $factory : $factory(...);
     }
 
+    protected function isWrapped(): bool
+    {
+        return $this->wrapped !== null;
+    }
+
     public function getWrapped(): ResponseInterface
     {
         return $this->wrapped ??=
