@@ -14,6 +14,6 @@ services:
       - .env
     environment:
       PHP_IDE_CONFIG: "serverName=cli" # Used by PhpStorm for path mapping
-      COMPOSER_AUTH: '{"github-oauth": {"github.com":"${GITHUB_TOKEN}"}}' # Optional: increases API rate limit
+      COMPOSER_AUTH: "${COMPOSER_AUTH:-}" # Set via Makefile when GITHUB_TOKEN is available
     extra_hosts:
       - host.docker.internal:host-gateway

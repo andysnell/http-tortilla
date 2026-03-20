@@ -11,6 +11,10 @@ _ERROR := "\033[31m%s\033[0m %s\n" # Red text template for "printf"
 # Command Aliases & Function/Variable Definitions
 ##------------------------------------------------------------------------------
 
+# Set COMPOSER_AUTH only when GITHUB_TOKEN is non-empty (avoids confusing 401 errors with empty tokens)
+export COMPOSER_AUTH ?= $(shell TOKEN=$$(grep '^GITHUB_TOKEN=' .env 2>/dev/null | cut -d= -f2); \
+	if [ -n "$$TOKEN" ]; then echo '{"github-oauth": {"github.com":"'$$TOKEN'"}}'; fi)
+
 docker-php = docker compose run --rm php
 docker-run = docker run --rm --env-file "$${PWD}/.env" --user=$$(id -u):$$(id -g)
 
