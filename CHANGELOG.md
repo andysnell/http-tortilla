@@ -22,33 +22,24 @@ this project.
 
 ### Changed
 
-- Renamed organization namespace from `PhoneBurner` to `WickedByte`
-- Updated composer package name from `phoneburner/http-tortilla` to `wickedbyte/http-tortilla`
-- Updated default PHP version in Docker configuration to 8.5
-- Renamed `docker-compose.yml` to `compose.yml`
-- Replaced `phoneburner/coding-standard` with `wickedbyte/coding-standard`
-- Updated development dependencies to latest versions
-- Updated GitHub Actions to run on PHP version matrix (8.2, 8.3, 8.4, 8.5)
-- Updated CONTRIBUTING.md and SECURITY.md files
-- Standardized CHANGELOG date format to Keep a Changelog convention
-- Replaced `salt-lite` Docker image naming with project-specific names
-- Fixed Dockerfile nested heredoc to use distinct delimiters
-- Added `sharing=locked` to Dockerfile apt-get cache mount
-- Installed PHP `zip` extension in Dockerfile
-- Changed `UploadedFileWrapper::setWrapped()` from `private` to `protected` for consistency
-- Raised PHPStan analysis level from 8 to max with proper type annotations
-- Replaced blanket Prophecy PHPStan suppressor with `jangregor/phpstan-prophecy` extension
-- Changed `XDEBUG_MODE` default from `debug` to `off` in `.env.dist`
-- Improved CI workflow security (use env vars in sed, add Docker Buildx)
+- **Breaking:** Renamed organization namespace from `PhoneBurner\Http\Message` to `WickedByte\Http\Message`
+- **Breaking:** Updated composer package name from `phoneburner/http-tortilla` to `wickedbyte/http-tortilla`
+- Changed `UploadedFileWrapper::setWrapped()` visibility from `private` to `protected` for consistency
+- Added `ResponseWrapper::isWrapped()` protected method for clean null-state checking
+- **Dev:** Replaced `phoneburner/coding-standard` with `wickedbyte/coding-standard`
+- **Dev:** Raised PHPStan analysis level from 8 to max, added proper type annotations throughout
+- **Dev:** Replaced blanket Prophecy PHPStan suppressor with `jangregor/phpstan-prophecy` extension
+- **Dev:** Updated all development dependencies to latest versions
+- **Dev:** Updated GitHub Actions to run on PHP version matrix (8.2, 8.3, 8.4, 8.5)
+- **Dev:** Updated default Docker PHP version to 8.5, renamed `docker-compose.yml` to `compose.yml`
+- **Dev:** Various Dockerfile improvements (heredoc delimiters, apt cache locking, zip extension)
+- **Dev:** Made `GITHUB_TOKEN` optional (only needed for API rate-limit relief)
 
 ### Added
 
 - Added WickedByte copyright to LICENSE file
-- Added fork notice to README.md
-- Added `homepage` and `prefer-stable` to composer.json
-- Added CODE_OF_CONDUCT.md (Contributor Covenant 3.0)
-- Added proper PHP blocks to README code examples
-- Added `StreamWrapper` void method test coverage for unwrapped state
+- **Dev:** Added `homepage` and `prefer-stable` to composer.json
+- **Dev:** Added CODE_OF_CONDUCT.md, updated CONTRIBUTING.md and SECURITY.md
 
 ## [2.0.1] - 2025-11-13
 
