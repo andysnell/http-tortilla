@@ -35,6 +35,11 @@ this project.
 - Fixed Dockerfile nested heredoc to use distinct delimiters
 - Added `sharing=locked` to Dockerfile apt-get cache mount
 - Installed PHP `zip` extension in Dockerfile
+- Changed `UploadedFileWrapper::setWrapped()` from `private` to `protected` for consistency
+- Raised PHPStan analysis level from 8 to max with proper type annotations
+- Replaced blanket Prophecy PHPStan suppressor with `jangregor/phpstan-prophecy` extension
+- Changed `XDEBUG_MODE` default from `debug` to `off` in `.env.dist`
+- Improved CI workflow security (use env vars in sed, add Docker Buildx)
 
 ### Added
 
@@ -42,6 +47,7 @@ this project.
 - Added fork notice to README.md
 - Added `homepage` and `prefer-stable` to composer.json
 - Added proper PHP blocks to README code examples
+- Added `StreamWrapper` void method test coverage for unwrapped state
 
 ## 2.0.1 - 2025-11-13
 
