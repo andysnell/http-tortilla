@@ -46,6 +46,7 @@ this project.
 - Added WickedByte copyright to LICENSE file
 - Added fork notice to README.md
 - Added `homepage` and `prefer-stable` to composer.json
+- Added CODE_OF_CONDUCT.md (Contributor Covenant 3.0)
 - Added proper PHP blocks to README code examples
 - Added `StreamWrapper` void method test coverage for unwrapped state
 
