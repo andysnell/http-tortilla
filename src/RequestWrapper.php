@@ -15,6 +15,7 @@ trait RequestWrapper
 {
     private RequestInterface|null $wrapped = null;
 
+    /** @var \Closure(): RequestInterface|null */
     private \Closure|null $factory = null;
 
     abstract protected function wrap(RequestInterface $message): static;

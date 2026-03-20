@@ -13,6 +13,7 @@ trait UriWrapper
 {
     private UriInterface|null $wrapped = null;
 
+    /** @var \Closure(): UriInterface|null */
     private \Closure|null $factory = null;
 
     abstract protected function wrap(UriInterface $uri): static;

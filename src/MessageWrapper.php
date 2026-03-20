@@ -14,6 +14,7 @@ trait MessageWrapper
 {
     private MessageInterface|null $wrapped = null;
 
+    /** @var \Closure(): MessageInterface|null */
     private \Closure|null $factory = null;
 
     abstract protected function wrap(MessageInterface $message): static;

@@ -1,9 +1,13 @@
 parameters:
-    level: 8
+    level: max
     tmpDir: build/phpstan
     paths:
         - src
         - tests
     ignoreErrors:
         - identifier: missingType.iterableValue
-        - message: '/^Call to an undefined method Prophecy\\Prophecy\\ObjectProphecy/'
+        -
+            identifier: method.nonObject
+            paths:
+                - tests/EvolvingWrapperTestCase.php
+                - tests/WrapperTestCase.php

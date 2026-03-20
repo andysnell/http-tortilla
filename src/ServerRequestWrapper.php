@@ -15,6 +15,7 @@ trait ServerRequestWrapper
 {
     private ServerRequestInterface|null $wrapped = null;
 
+    /** @var \Closure(): ServerRequestInterface|null */
     private \Closure|null $factory = null;
 
     /**

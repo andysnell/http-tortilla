@@ -13,6 +13,7 @@ trait StreamWrapper
 {
     private StreamInterface|null $wrapped = null;
 
+    /** @var \Closure(): StreamInterface|null */
     private \Closure|null $factory = null;
 
     protected function setWrapped(StreamInterface $stream): static

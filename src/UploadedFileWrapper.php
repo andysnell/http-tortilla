@@ -14,6 +14,7 @@ trait UploadedFileWrapper
 {
     private UploadedFileInterface|null $wrapped = null;
 
+    /** @var \Closure(): UploadedFileInterface|null */
     private \Closure|null $factory = null;
 
     protected function setWrapped(UploadedFileInterface $file): static

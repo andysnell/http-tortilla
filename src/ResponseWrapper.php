@@ -14,6 +14,7 @@ trait ResponseWrapper
 {
     private ResponseInterface|null $wrapped = null;
 
+    /** @var \Closure(): ResponseInterface|null */
     private \Closure|null $factory = null;
 
     abstract protected function wrap(ResponseInterface $response): static;
