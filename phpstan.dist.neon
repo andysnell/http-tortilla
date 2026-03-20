@@ -6,8 +6,3 @@ parameters:
         - tests
     ignoreErrors:
         - identifier: missingType.iterableValue
-        -
-            identifier: method.nonObject
-            paths:
-                - tests/EvolvingWrapperTestCase.php
-                - tests/WrapperTestCase.php

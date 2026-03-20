@@ -66,6 +66,7 @@ abstract class WrapperTestCase extends TestCase
         // the wrapper
         $expected ??= $args;
 
+        /** @phpstan-ignore method.nonObject (Prophecy) */
         $this->mock()->$method(...$expected)->willReturn($return);
         $sut = new (static::fixture())(
             wrapped: $this->mock()->reveal(),

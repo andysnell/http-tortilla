@@ -30,6 +30,7 @@ abstract class EvolvingWrapperTestCase extends WrapperTestCase
 
         // the initial wrapped instance should be called, and return the new
         // stub as it evolves the message
+        /** @phpstan-ignore method.nonObject, method.nonObject (Prophecy) */
         $this->mock()->$method(...$expected)->willReturn($return)->shouldBeCalled();
 
         // create a wrapper of the initial instance
@@ -39,6 +40,7 @@ abstract class EvolvingWrapperTestCase extends WrapperTestCase
         $evolved = $sut->$method(...$args);
 
         // the returned wrapper should be wrapping the new object
+        /** @phpstan-ignore method.nonObject (Prophecy) */
         self::assertSame($return, $evolved->getWrapped());
 
         // all of our fixtures preserve a new instance of the wrapper as well
