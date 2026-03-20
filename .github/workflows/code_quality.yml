@@ -32,4 +32,5 @@ jobs:
           cp .env.dist .env;
           sed -i "s/^GITHUB_TOKEN=.*/GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}/" ".env";
           sed -i "s/^PHP_VERSION=.*/PHP_VERSION=${PHP_VERSION}-cli/" ".env";
+          rm -f composer.lock;
           make -j$(nproc) && make ci;

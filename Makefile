@@ -76,7 +76,7 @@ build/docker/http-tortilla-%.json: Dockerfile | build/docker
 $(BUILD_DIRS): | .env
 	mkdir -p "$@"
 
-vendor: build/composer build/docker/docker-compose.json composer.json composer.lock | .env
+vendor: build/composer build/docker/docker-compose.json composer.json $(wildcard composer.lock) | .env
 	mkdir -p "$@"
 	@$(call check-token,GITHUB_TOKEN)
 	$(docker-php) composer install
