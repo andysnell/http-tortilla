@@ -70,6 +70,11 @@ cd /path/to/repository
 make
 ```
 
+> **Note:** A `GITHUB_TOKEN` in `.env` is optional. It increases the GitHub API rate limit for
+> Composer but is not required for installing public packages. If you hit rate limits, generate
+> a token at [github.com/settings/tokens](https://github.com/settings/tokens) (no scopes needed)
+> and add it to your `.env` file.
+
 The full suite of code quality tools can be run in one command:
 
 ```bash

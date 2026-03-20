@@ -25,23 +25,13 @@ define copy-safe
 	fi
 endef
 
-# Define behavior to check if a token (1) is set in .env, and prompt user to set it if not.
-# If the token is already set, inform the user. If the token name is not found in .env,
-# it will be appended, otherwise, the existing value will be updated.
+# Check if a token (1) is set in .env and print a helpful message if not. The token is
+# optional for public packages — it only increases the GitHub API rate limit for Composer.
 define check-token
-	if grep -q "^$(1)=" ".env"; then \
-		TOKEN_VALUE=$$(grep "^$(1)=" ".env" | cut -d'=' -f2); \
-		if [ -z "$$TOKEN_VALUE" ]; then \
-			read -p "Please enter your $(1): " NEW_TOKEN; \
-			sed -i "s/^$(1)=.*/$(1)=$$NEW_TOKEN/" ".env"; \
-			echo "$(1) updated successfully!"; \
-		else \
-			echo "$(1) is already set."; \
-		fi; \
-	else \
-		read -p "$(1) not found. Please enter your $(1): " NEW_TOKEN; \
-		echo -e "\n$(1)=$$NEW_TOKEN" >> ".env"; \
-		echo "$(1) added successfully!"; \
+	@TOKEN_VALUE=$$(grep "^$(1)=" ".env" 2>/dev/null | cut -d'=' -f2); \
+	if [ -z "$$TOKEN_VALUE" ]; then \
+		printf $(_WARN) "[optional]" "$(1) is not set in .env. Composer may hit GitHub API rate limits."; \
+		printf $(_INFO) "" "To set it: echo '$(1)=<your-token>' >> .env"; \
 	fi
 endef
 
